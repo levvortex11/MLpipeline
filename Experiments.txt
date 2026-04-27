@@ -1,0 +1,30 @@
+DL_Titanic:
+
+hidden_layers: [128, 64], dropout_p, 'batch_size': 32, 'optimizer': 'adam', 0.3 AUC: 0.8779
+hidden_layers: [256], dropout_p: 0.4, 'batch_size': 32, 'optimizer': 'adam', AUC: 0.8740
+hidden_layers: [64, 32, 16], dropout_p: 0.2, 'batch_size': 32, 'optimizer': 'adam', AUC: 0.8763
+hidden_layers: [64, 32, 16], dropout_p: 0.6, 'batch_size': 32, 'optimizer': 'adam', AUC: 0.8751
+
+DL_Houses_Prices
+hidden_layers: [512, 256], dropout_p: 0.4, batch_size: 64, 'optimizer': 'adam', RMSE: 79735.5784
+hidden_layers: [128, 64, 32, 16], dropout_p: 0.2, batch_size: 32, 'optimizer': 'adam', RMSE: 72577.1323
+
+ML_Titanic:
+
+Стекинг: roc_auc: 0.8837
+catboost: roc_auc: 0.8773
+xgb: roc_auc: 0.8605
+elasticnet: roc_auc: 0.8455
+
+ML_Houses_Prices 
+
+Стекинг RMSE: 28379.3005
+catboost: RMSE: 26906.9341
+xgb: RMSE: 31021.3077
+elasticnet: RMSE: 36653.5706
+
+Я не концентрировался на выбивании скоров, моя цель была в написании пайплайна
+
+Лучшие результаты:
+Houses_Prices: catboost: RMSE: 26906.9341
+Titanic: Стекинг: roc_auc: 0.8837
